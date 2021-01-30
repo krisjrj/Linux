@@ -1,0 +1,36 @@
+常见指令：
+pwd 显示用户当前所在的目录。
+
+ls 对于目录，该命令列出该目录下的所有子目录与文件。对于文件，将列出文件名以及其他信息。
+
+cd 改变工作目录。将当前工作目录改变到指定的目录下
+在这里插入图片描述
+#绝对路径不会失效，相对路径容易失效
+#基本上，所有的操作系统文件管理，都采用的是树状结构
+
+touch 常用来创建普通文件
+指令：touch test.c 创建一个test.c文件
+
+mkdir(重要) 在当前目录下创建一个名为 “name”的目录
+指令：mkdir name
+
+rmdir&&rm(重要) rmdir是一个与mkdir相对应的命令。mkdir是建立目录，而rmdir是删除命令。
+指令：rmdir name 删除name(必须为空)
+指令：rm name 同时删除文件或目录
+Linux没有回收站
+
+man(重要) man name查看name指令的功能
+man man 时q 退出
+
+cp(重要) cp name 复制name文件或目录
+#cp -f 强行复制文件或目录
+#cp -R 按递归处理，将指定目录下的文件及子目录一并处理(类似Windows复制粘贴)
+
+echo echo “hello linux” 将后续字符串，显示到显示器中
+
+cat 查看目标文件的内容
+tac倒序打印文件
+
+mv移动文件或改名
+指令：mv my.txtt you.txt my.txt重命名为you.txt
+指令：mv you.txt rid 文件转移
