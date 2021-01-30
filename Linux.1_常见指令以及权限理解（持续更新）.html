@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linux.1_常见指令以及权限理解（持续更新）</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h2><a id="_0"></a>常见指令：</h2>
+<ol>
+<li>
+<p><strong>pwd</strong>	显示用户当前所在的目录。</p>
+</li>
+<li>
+<p><strong>ls</strong>	对于目录，该命令列出该目录下的所有子目录与文件。对于文件，将列出文件名以及其他信息。</p>
+</li>
+<li>
+<p><strong>cd</strong>	改变工作目录。将当前工作目录改变到指定的目录下<br>
+<img src="https://img-blog.csdnimg.cn/20210121162251831.png" alt="在这里插入图片描述"><br>
+#绝对路径不会失效，相对路径容易失效<br>
+#基本上，所有的操作系统文件管理，都采用的是树状结构</p>
+</li>
+<li>
+<p><strong>touch</strong> 常用来创建普通文件<br>
+指令：touch test.c 创建一个test.c文件</p>
+</li>
+<li>
+<p><strong>mkdir(重要)</strong> 在当前目录下创建一个名为 “name”的目录<br>
+指令：mkdir name</p>
+</li>
+<li>
+<p><strong>rmdir&amp;&amp;rm(重要)</strong>	rmdir是一个与mkdir相对应的命令。mkdir是建立目录，而rmdir是删除命令。<br>
+指令：rmdir name 	删除name(必须为空)<br>
+指令：rm      name	同时删除文件或目录<br>
+Linux没有回收站</p>
+</li>
+<li>
+<p><strong>man(重要)</strong> man name查看name指令的功能<br>
+man man 时q 退出</p>
+</li>
+<li>
+<p><strong>cp(重要)</strong> cp name 复制name文件或目录<br>
+#cp -f  	强行复制文件或目录<br>
+#cp -R 按递归处理，将指定目录下的文件及子目录一并处理(类似Windows复制粘贴)</p>
+</li>
+<li>
+<p><strong>echo</strong> echo “hello linux” 将后续字符串，显示到显示器中<br>
+echo “hellow world” &gt; file.txt 		#把字符串写入文件(空格要写对)</p>
+</li>
+<li>
+<p><strong>cat</strong> 查看目标文件的内容（打印）<br>
+tac倒序打印文件</p>
+</li>
+<li>
+<p><strong>mv</strong>移动文件或改名<br>
+指令：mv my.txtt you.txt  my.txt重命名为you.txt<br>
+指令：mv you.txt rid     文件转移</p>
+</li>
+<li>
+<p><strong>more</strong>查看文件<br>
+more file.txt  查看file.txt内一页的内容。<br>
+/num   在more内使用，跳转到第num行数据。<br>
+<img src="https://img-blog.csdnimg.cn/20210130212922157.png" alt="在这里插入图片描述"></p>
+</li>
+<li>
+<p><strong>less</strong>，用法与more相同<br>
+不同：<br>
+cat 一次显示完 										小文件<br>
+more 一次一页，只能下翻（回车）<br>
+less 一次一页，可上可下 （上下键）    多行文件</p>
+</li>
+<li>
+<p><strong>head</strong>文件的局部提取<br>
+head -n file.txt    提取file文件前n行<br>
+<img src="https://img-blog.csdnimg.cn/20210130221226801.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2tyaXNfcGF1bA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+</li>
+<li>
+<p><strong>tail</strong>文件的局部提取<br>
+tail -n file.txt 提取file文件后n行<img src="https://img-blog.csdnimg.cn/20210130221601550.png" alt="在这里插入图片描述"></p>
+</li>
+</ol>
+</div>
+</body>
+
+</html>
